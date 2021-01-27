@@ -1,0 +1,88 @@
+@import "variables.scss";
+.svg{
+    display: block;
+}
+
+
+.svg--arrow{
+    .svg__path{
+        stroke: $color-primary;
+
+        @at-root .division-developing &{
+            stroke: $color-developing;
+        }
+        @at-root .division-finance &{
+            stroke: $color-finance;
+        }
+        @at-root .division-landscape &{
+            stroke: $color-landscape;
+        }
+        @at-root .division-solar &{
+            stroke: $color-solar;
+        }
+    }
+}
+
+.svg--minidevelop,.svg--minisolar,.svg--minilandscape,.svg--minifinance,.svg--miniabout{
+    .svg__path{
+        fill: $color-primary-lighter;
+        transition-property: fill;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+    }
+}
+
+.svg--minidevelop{
+    .svg__path{
+        @at-root .mininav__item--active &{
+            fill: $color-developing;
+        }
+        @at-root .mininav__item:hover &{
+            fill: $color-developing;
+        }
+    }
+}
+
+.svg--minisolar{
+    .svg__path{
+        @at-root .mininav__item--active &{
+            fill: $color-solar;
+        }
+        @at-root .mininav__item:hover &{
+            fill: $color-solar;
+        }
+    }
+}
+
+.svg--minilandscape{
+    .svg__path{
+        @at-root .mininav__item--active &{
+            fill: $color-landscape;
+        }
+        @at-root .mininav__item:hover &{
+            fill: $color-landscape;
+        }
+    }
+}
+
+.svg--minifinance{
+    .svg__path{
+        @at-root .mininav__item--active &{
+            fill: $color-finance;
+        }
+        @at-root .mininav__item:hover &{
+            fill: $color-finance;
+        }
+    }
+}
+
+.svg--miniabout{
+    .svg__path{
+        @at-root .mininav__item--active &{
+            fill: url(#svg--miniabout-gradient);
+        }
+        @at-root .mininav__item:hover &{
+            fill: url(#svg--miniabout-gradient);
+        }
+    }
+}

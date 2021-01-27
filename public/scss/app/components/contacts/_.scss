@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    color: $contacts-color;
+    @include fluid-font(xs);
+    box-shadow: none;
+    width: 100%;
+
+    @include media($contacts-breakpoint){
+        box-shadow: 0 rem(5) rem(20) 0 rgba(0, 0, 0, 0.05);
+        padding: rem(60) rem(55);
+        width: auto;
+    }
+
+}
+
+.contacts__heading{
+    width: 100%;
+    margin-bottom: 1.2em;
+    color: $contacts-heading-color;
+}
+
+.contacts__wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    @include media($contacts-breakpoint){
+        flex-direction: row;
+    }
+}
+
+.contacts__col{
+    &:not(:last-child){
+        margin-bottom: 3em;
+    }
+    @include media($contacts-breakpoint){
+        margin-bottom: 0;
+    }
+}
+
+.contacts__line{
+    &:not(:last-child){
+        margin-bottom: 0.8em;
+    }
+    &--dark{
+        color: $contacts-color-dark;
+    }
+}

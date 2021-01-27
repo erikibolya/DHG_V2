@@ -1,0 +1,65 @@
+@import "variables.scss";
+
+.mininav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:  $color-secondary;
+    margin: auto;
+    font-size: rem(30);
+    padding: rem(10) rem(35);
+
+    box-shadow: 0.3125rem 0 1.25rem 0 rgba(0, 0, 0, 0.05);
+    //padding: 0.5em 1.6em;
+    //@include border-radius(rem(100));
+    //background-color: $color-secondary;
+    @include media($sidebar-breakpoint){
+        justify-content: center;
+        width: auto;
+        bottom: auto;
+        background-color: transparent;
+        transform: translateX(-50%);
+        left: 50%;
+        position: absolute;
+        box-shadow: none;
+    }
+}
+
+.mininav__item{
+
+    &:not(:last-child){
+        margin-right: 0.7em;
+    }
+
+}
+
+
+.mininav__item--about{
+    margin-left: auto;
+    @include media($sidebar-breakpoint){
+        display: none;
+    }
+
+}
+
+.mininav__item__svg{
+    width: rem(38);
+    height: rem(38);
+    will-change: width, height;
+    transition-property: width, height;
+    transition-duration: $header-transition-duration;
+    transition-timing-function: $header-transition-timing-function;
+
+
+}
+
+.header--scrolled .mininav__item__svg{
+    @include media($sidebar-breakpoint){
+        width: rem(30);
+        height: rem(30);
+    }
+}

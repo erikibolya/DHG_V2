@@ -1,0 +1,57 @@
+@font-face{
+    font-family: "SofiaPro";
+    src: url("../fonts/SofiaPro-Regular.woff");
+}
+
+
+@font-face{
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNova-Regular.woff");
+}
+
+
+$font-sans-serif: "ProximaNova";
+$font-sans-serif-letter-spacing: 0em;
+
+$font-sans-serif-heading:"SofiaPro";
+
+
+
+//-----z-indexes--
+$z-indexes: (
+sidebar: 150,
+header: 100,
+main: 50,
+menu: -1,
+
+);
+
+$color-primary: #3c3750;
+$color-primary-light: #817d8e;
+$color-primary-lighter: rgba(0, 0, 0, .2);
+
+$color-secondary: #ffffff;
+$color-secondary-dark: #fcfcfc;
+
+$color-terciary: #00a6e7;
+
+$color-developing: #0d56a5;
+$color-landscape: #8dc63f;
+$color-solar: #ed1c24;
+$color-finance: #fdb813;
+$color-about: $color-terciary;
+
+
+$sidebar-breakpoint: 800;
+$sidebar-widths: (
+xl: 425,
+$sidebar-breakpoint: 300
+);
+
+
+$header-height: 130;
+
+$header-height-scrolled: 80;
+
+$header-transition-duration: 0.4s;
+$header-transition-timing-function: ease;

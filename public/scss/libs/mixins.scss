@@ -1,0 +1,53 @@
+@mixin border-radius($radius){
+    border-top-left-radius:$radius;
+    border-top-right-radius:$radius;
+    border-bottom-left-radius:$radius;
+    border-bottom-right-radius:$radius;
+}
+
+@mixin border-radius-top($radius){
+    border-top-left-radius:$radius;
+    border-top-right-radius:$radius;
+}
+
+@mixin border-radius-top-left($radius){
+    border-top-left-radius:$radius;
+}
+
+@mixin border-radius-top-right($radius){
+    border-top-right-radius:$radius;
+}
+
+@mixin border-radius-bottom($radius){
+    border-bottom-left-radius:$radius;
+    border-bottom-right-radius:$radius;
+}
+
+@mixin border-radius-bottom-left($radius){
+    border-bottom-left-radius:$radius;
+}
+
+@mixin border-radius-bottom-right($radius){
+    border-bottom-right-radius:$radius;
+}
+
+@mixin border-radius-left($radius){
+    border-bottom-left-radius:$radius;
+    border-top-left-radius:$radius;
+}
+
+@mixin border-radius-right($radius){
+    border-bottom-right-radius:$radius;
+    border-top-right-radius:$radius;
+}
+
+@mixin padding-x($value){
+    padding-left: $value;
+    padding-right: $value;
+}
+
+@mixin padding-y($value){
+    padding-top: $value;
+    padding-bottom: $value;
+}
+

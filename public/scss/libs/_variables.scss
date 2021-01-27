@@ -1,0 +1,53 @@
+//layout
+$layout-line-height-base: 1.45;
+$layout-container-max-width: 1200;
+$layout-container-inner-paddings: (
+xl: 35,
+s: 35
+);
+$layout-container-max-width-with-paddings: $layout-container-max-width + (2*map-get($layout-container-inner-paddings,nth(map-keys($layout-container-inner-paddings),1)));
+//!layout
+
+//media
+$media-breakpoints-map: (
+s: 320, //phone up
+m: 600, //tablet portrait up
+l: 900, //tablet landscape up
+xl: $layout-container-max-width-with-paddings //desktop up
+);
+
+$media-breakpoints-map-v: (
+xl: 1080,
+l: 900,
+s: 600
+);
+
+$media-rules-map: (
+w: "min-width",
+h: "min-height",
+o: "orientation",
+ar: "min-aspect-ratio"
+);
+//!media
+
+//fonts
+$font-sizes:(
+xxl:(xl:46,s:36),
+xl:(xl:40,s:30),
+l:(xl:32,s:26),
+m:(xl:26,s:22),
+s:(xl:18,s:16),
+xs:(xl:16,s:15),
+);
+//!fonts
+
+//headings
+$headings-sizes:(
+h1:xxl,
+h2:xl,
+h3:l,
+h4:m,
+h5:s,
+h6:xs
+);
+//!headings

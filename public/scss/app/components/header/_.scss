@@ -1,0 +1,108 @@
+@import "variables.scss";
+
+.header{
+    /*background-color: green;*/
+    z-index: z-index(header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-secondary;
+    height: rem($header-height-scrolled);
+    /*@include linear-interpolation-chain(height,$header-heights);*/
+    transition: height $header-transition-duration $header-transition-timing-function;
+    will-change: height;
+    
+    
+    @include media($sidebar-breakpoint){
+      height: rem($header-height);
+    }
+
+}
+
+
+.header--scrolled{
+   
+    box-shadow: 0.3125rem 0 1.25rem 0 rgba(0, 0, 0, 0.05);
+
+    @include media($sidebar-breakpoint){
+         height: rem($header-height-scrolled); 
+       .header__logo{
+            width: rem($header-logo-scrolled);
+        }
+    }
+
+
+}
+
+.header__container{
+    /*background-color: red;*/
+    position: relative;
+    @include container;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+
+.header__logo{
+    width: rem($header-logo-scrolled);
+    margin-top: rem(4);
+    will-change: width, height;
+    transition-property: width, height;
+    transition-duration: $header-transition-duration;
+    transition-timing-function: $header-transition-timing-function;
+    
+    @include media($sidebar-breakpoint){
+         width: rem($header-logo-width); 
+    }
+}
+
+
+
+
+
+.header__hamburger{
+    align-self: center;
+    margin-left: auto;
+    @include media($sidebar-breakpoint){
+        display: none;
+    }
+}
+
+.header__hamburger__svg{
+    width: rem(30);
+}
+
+.header__link{
+    display: none;
+    color: $color-primary;
+    font-size: rem(18);
+    margin-right: rem(50);
+    margin-left: auto;
+    cursor: pointer;
+    @include media($sidebar-breakpoint){
+        display: block;
+    }
+}
+
+
+.header__languages{
+    display: block;
+    margin-left: auto;
+    align-self: center;
+    font-size: rem(18);
+    color: $color-primary-lighter;
+    @include media($sidebar-breakpoint){
+        margin-left: 0;
+        display: block;
+    }
+}
+.header__languages__item{
+    color: $color-primary-lighter;
+    text-decoration: none;
+    &:hover,&--active{
+        color: $color-primary;
+    }
+}

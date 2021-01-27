@@ -1,0 +1,38 @@
+@import "variables.scss";
+
+.main{
+    @include container;
+    z-index: z-index(main);
+    position: relative;
+    flex-direction: column;
+    padding-top: rem($header-height-scrolled);
+    
+    @include media($sidebar-breakpoint){
+         padding-top: rem($header-height);
+    }
+    
+    $temp-breakpoint:($sidebar-breakpoint + 1);
+    
+    @include linear-interpolation-chain(padding-top, (
+    xl: $header-height + 70,
+        900: ($header-height + 50),
+        899: $header-height,
+        $temp-breakpoint: $header-height,
+        $sidebar-breakpoint: $header-height-scrolled,
+        s: $header-height-scrolled
+        ));
+    
+    @include linear-interpolation-chain(margin-bottom, $main-margins-bottom);
+    flex-grow: 1;
+
+    &--homepage{
+        display: flex;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+        padding-top: 0;
+    }
+
+
+}

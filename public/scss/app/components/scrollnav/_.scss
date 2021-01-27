@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+.scrollnav{
+    @include container;
+    justify-content: space-between;
+    font-family: $font-sans-serif-heading;
+    @include linear-interpolation-chain(font-size,$scrollnav-font-sizes);
+    background-color: $color-secondary;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    @include padding-y(1em);
+
+    box-shadow: 0 rem(3) rem(6) rgba(0,0,0,0.04);
+    @include media($scrollnav-breakpoint){
+        justify-content: flex-start;
+        width: auto;
+        padding-right: 2em;
+        @include linear-interpolation-chain(padding-left,$layout-container-inner-paddings);
+        @include border-radius-right(rem(30));
+    }
+
+    @include media($sidebar-breakpoint){
+        display: none;
+    }
+}
+
+.scrollnav__item{
+    position: relative;
+    color: $color-primary-lighter;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+
+    @include media($scrollnav-breakpoint){
+        &:not(:last-child){
+            margin-right: rem(30);
+        }
+    }
+
+    &:hover,&--active{
+        color: $color-primary;
+        .topnav__underline{
+            background-color: $color-primary;
+            transform: scaleX(1);
+        }
+    }
+}
+
+
+.scrollnav__underline{
+    position: absolute;
+    bottom: rem(-2);
+    left: 0;
+    width: 100%;
+    height: rem(2);
+    background-color: $color-primary-lighter;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition-property: transform, background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}

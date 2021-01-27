@@ -1,0 +1,66 @@
+@import "variables.scss";
+
+
+.footer{
+    @include container();
+    @include linear-interpolation-chain(font-size, (
+    xl: 16,
+        s: 13
+        ));
+
+    @include linear-interpolation-chain(padding-bottom, (
+    xl: 200,
+        $contacts-breakpoint: 0
+        ));
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap-reverse;
+}
+
+.footer__right{
+    flex-shrink: 0;
+    width: rem(825);
+    max-width: 100%;
+}
+
+.footer__left{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    align-content: space-between;
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+}
+
+.footer__img{
+    @include linear-interpolation-chain(width, (
+    $contacts-breakpoint: 300,
+        s: 160
+        ));
+    flex-shrink: 0;
+    margin-right: auto;
+
+    @include media($contacts-breakpoint){
+        width: 100%;
+        min-width: rem(300);
+        max-width: rem(350);
+    }
+}
+
+.footer__copyright{
+    @include linear-interpolation-chain(font-size, (
+    $contacts-breakpoint: 18,
+        s: 12
+        ));
+    color: $footer-font-color;
+    @include media($contacts-breakpoint){
+        font-size: rem(18);
+    }
+}
+
+.footer__text{
+
+    font-weight: bold;
+    margin-top: 1em;
+}

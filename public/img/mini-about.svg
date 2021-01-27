@@ -1,0 +1,31 @@
+<svg viewBox="0 0 461.35 461.38">
+  <defs>
+    <style>
+      .a {
+        fill: url(#a);
+      }
+    </style>
+    <radialGradient id="a" cx="-5936.92" cy="2170.36" r="306" gradientTransform="matrix(-0.71, -0.71, -0.71, 0.71, -2352.71, -5432.09)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2da9e1"/>
+      <stop offset="1" stop-color="#0d5ea9"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <polygon class="a" points="340.92 220.38 340.92 120.6 241.16 120.6 241.16 220.38 340.92 220.38"/>
+    <rect class="a" x="361.54" y="120.6" width="99.77" height="99.78"/>
+    <path class="a" d="M461.31,76.93A76.83,76.83,0,0,0,384.58,0h-23V99.78h99.77Z"/>
+    <path class="a" d="M361.54,461.38H384.4a76.83,76.83,0,0,0,76.91-76.74v-23H361.54Z"/>
+    <polygon class="a" points="340.92 361.6 241.16 361.6 241.16 461.38 340.92 461.38 340.92 361.6"/>
+    <rect class="a" x="361.54" y="241.19" width="99.77" height="99.78"/>
+    <polygon class="a" points="340.92 241.19 241.16 241.19 241.16 340.97 340.92 340.97 340.92 241.19"/>
+    <polygon class="a" points="340.92 0.19 241.16 0.19 241.16 99.78 340.92 99.78 340.92 0.19"/>
+    <rect class="a" x="120.58" y="0.19" width="99.77" height="99.78"/>
+    <rect class="a" x="120.58" y="120.6" width="99.77" height="99.78"/>
+    <rect class="a" y="120.6" width="99.77" height="99.78"/>
+    <rect class="a" x="120.58" y="241.19" width="99.77" height="99.78"/>
+    <rect class="a" y="241.19" width="99.77" height="99.78"/>
+    <rect class="a" y="361.6" width="99.77" height="99.78"/>
+    <rect class="a" x="120.58" y="361.6" width="99.77" height="99.78"/>
+    <path class="a" d="M99.77.19H76.92A76.83,76.83,0,0,0,0,76.93H0v23H99.77Z"/>
+  </g>
+</svg>

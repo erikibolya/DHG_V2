@@ -1,0 +1,48 @@
+//import parts of app here
+@import "_variables.scss";
+
+
+//loading app components
+
+@import "components/heading/_.scss";
+
+@import "components/homepage/_.scss";
+
+@import "components/header/_.scss";
+
+@import "components/sidebar/_.scss";
+
+@import "components/scrollnav/_.scss";
+
+@import "components/mininav/_.scss";
+
+@import "components/sidenav/_.scss";
+
+@import "components/main/_.scss";
+
+@import "components/info/_.scss";
+
+@import "components/paragraph/_.scss";
+
+@import "components/invests/_.scss";
+
+@import "components/contacts/_.scss";
+
+@import "components/table/_.scss";
+
+@import "components/divisions/_.scss";
+
+@import "components/svg/_.scss";
+
+@import "components/placeholder-text/_.scss";
+
+
+
+@import "components/footer/_.scss";
+
+//loading global styles
+@import "global.scss";
+@import "utility.scss";
+
+//loading lib components
+

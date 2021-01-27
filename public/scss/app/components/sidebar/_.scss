@@ -1,0 +1,80 @@
+@import "variables.scss";
+
+#sidebar{
+    display: none;
+    &:checked{
+        + .sidebar{
+            transform: translateX(0);
+        }
+    }
+
+}
+
+.sidebar{
+    z-index: z-index(sidebar);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: $sidebar-background-color;
+    transform: translateX(-100%);
+    width: 100%;
+    overflow: hidden;
+    @at-root .page--homepage & {
+        display: none;
+    }
+
+    @include media($sidebar-breakpoint){
+        display: none;
+    }
+
+}
+
+.sidebar__scrollarea{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.sidebar__container{
+    @include container;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    @include media($sidebar-breakpoint){
+        @include linear-interpolation-chain(width, $sidebar-widths);
+    }
+}
+
+.sidebar__header{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: rem($header-height);
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: rem(50);
+}
+
+.sidebar__header__logo{
+    width: rem($header-logo-width);
+    margin-top: rem(4);
+}
+
+.sidebar__header__close{
+    margin-left: auto;
+}
+
+.sidebar__header__svg{
+    display: block;
+    width: rem(20);
+    height: rem(20);
+    display: block;
+}
+
+
+.sidebar__logo{
+    margin-bottom: rem(50);
+}

@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+.heading{
+    font-family: $font-sans-serif-heading;
+    font-weight: normal;
+    font-style: normal;
+    color: $heading-color;
+    line-height: 1.33;
+
+
+    &--light{
+        color: $heading-color-light;
+    }
+
+    &--regular{
+        font-weight: normal;
+    }
+    &--italic{
+        font-style: italic;
+    }
+    &--thin{
+        font-weight: 300;
+    }
+
+    &--center{
+        text-align: center;
+    }
+}
+
+.heading__light{
+    opacity: 0.4;
+}
+
+.heading__breadcrumb{
+    color: #e0e0e0;
+    @include linear-interpolation-chain(font-size,(xl:24,s:16.5));
+}
+
+.heading__text{
+    vertical-align: baseline;
+    margin-right: 0.5em;
+    &--warning{
+        display: inline-block;
+        position: relative;
+        bottom: rem(7);
+        margin-bottom: rem(10);
+        margin-right: rem(30);
+        font-size: rem(18);
+        @include linear-interpolation-chain(font-size,(xl:18,s:15));
+        padding: 0.611em 2.38em 0.611em 2.38em;
+        color: $material-color-red-800;
+        border: rem(3) solid $material-color-red-800;
+        @include border-radius(rem(60));
+    }
+}
+
+@for $i from 1 through 6{
+    #{".heading--"+$i}{
+        @include heading("h"+$i);
+    }
+}

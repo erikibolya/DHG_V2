@@ -1,0 +1,30 @@
+
+html{
+    font-family: $font-sans-serif;
+    letter-spacing: $font-sans-serif-letter-spacing;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body{ 
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: $color-secondary-dark;
+    background-color: $color-secondary;
+    overflow-x: hidden;
+    
+    padding-bottom: rem(58);
+    @include media($sidebar-breakpoint){
+        padding-bottom: 0;
+    }
+}

@@ -1,0 +1,36 @@
+@import "variables.scss";
+
+.paragraph{
+    @include fluid-font($paragraph-font-size);
+    color: $paragraph-color;
+    display: block;
+    line-height: 2;
+    margin: 0;
+    margin-bottom: 2em;
+    @include media(l){
+        margin-bottom: 3.5em;
+    }
+    > u{
+        background-color: transparent;
+        text-decoration: none;
+        border-bottom: rem(1) currentColor solid;
+        padding-bottom: rem(1);
+
+        @at-root .page--about &{
+            color: $color-about
+        }
+        @at-root .page--developing &{
+            color: $color-developing
+        }
+        @at-root .page--finance &{
+            color: $color-finance;
+        }
+        @at-root .page--landscape &{
+            color: $color-landscape
+        }
+        @at-root .page--solar &{
+            color: $color-solar;
+        }
+    }
+
+}

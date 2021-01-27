@@ -1,0 +1,19 @@
+$homepage-container-width: 1920;
+$homepage-breakpoint: 1000;
+$homepage-4k-breakpoint: 2500;
+
+$homepage-link-widths: (
+$homepage-container-width: 60, 
+$homepage-breakpoint: 50
+);
+
+$homepage-item-paddings-horizontal:(
+$homepage-4k-breakpoint: 95,
+$homepage-container-width: 60, 
+$homepage-breakpoint: 40
+);
+
+$homepage-paragraph-font-sizes: (
+$homepage-container-width: 14,
+xl: 12,
+)

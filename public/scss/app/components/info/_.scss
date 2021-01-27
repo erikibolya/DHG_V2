@@ -1,0 +1,179 @@
+@import "variables.scss";
+
+
+.info{
+    position: relative;
+    @include container-pl;
+    margin-left: 0;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: rem(20);
+    flex-direction: column;
+
+
+    @include media(l){
+        padding-bottom: rem(80);
+    }
+
+    @include media($info-breakpoint){
+        flex-direction: row;
+        padding-right: 42%;
+        @at-root .page--about &{
+            padding-right: 0;
+        }
+    }
+
+}
+
+.info__logo{
+    @include linear-interpolation-chain(width, $info-logo-widths);
+    max-width: 100%;
+    margin-bottom: rem(30);
+
+    @include media(900){
+        margin-bottom: rem(60);
+
+    }
+}
+
+.info__heading{
+    line-height: 1.3;
+    margin-bottom: rem(70);
+    position: relative;
+}
+.info__paragraph{
+    position: relative;
+}
+
+.info__accordion__wrapper{
+    position: relative;
+}
+
+.info__gradient{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #ffffff 0%, rgba(255,255,255,0) 100%);
+
+}
+
+.info__description{
+    //margin-bottom: rem(50);
+
+    @at-root .page--about &{
+        max-width: rem(900);
+    }
+
+    @include media($info-breakpoint){
+        //margin-bottom: rem(50);
+    }
+}
+
+.info__illustration{
+    width: 100%;
+    max-width: rem(400);
+    margin: 0 auto;
+    margin-bottom: rem(30);
+    display: none;
+
+    @include media($sidebar-breakpoint){
+        margin-bottom: rem(40);
+    }
+
+    &--small{
+        display: block;
+    }
+
+
+    @include media(l){
+        &--small{
+            display: none;
+        }
+        &--large{
+            display: block;
+        }
+        width: rem(480);
+        max-width: none;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: translateX(100%);
+        right: -10%;
+    }
+    &--about{
+        display: block;
+        width: rem(1300);
+        max-width: none;
+        margin-bottom: 0;
+        position: absolute;
+        bottom: rem(-105);
+        right: 0;
+        transform: translateX(71%);
+        z-index: -10;
+        opacity: 0.3;
+    }
+
+
+}
+
+.info__accordion{
+    position: relative;
+
+    &.is-active{
+        overflow: visible;
+
+        .info__gradient{
+            background: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .info__accordion__button{
+            &:after{
+                content: "SKRY\0164";
+                @at-root :lang(en) &{
+                    content: "HIDE";
+                }
+            }
+        }
+    }
+}
+
+.info__accordion__hidden{
+    height: 0;
+    overflow: hidden;
+    > .info__paragraph{
+        &:last-child{
+            margin-bottom: rem(120);
+        }
+    }
+}
+
+.info__accordion__button{
+    z-index: 60;
+    font-size: rem(13);
+    bottom: rem(44);
+    color: $color-primary;
+    background-color: $color-secondary;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    padding: rem(15) rem(26) rem(13) rem(26);
+    @include border-radius(rem(60));
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 500ms;
+    box-shadow: 0.3125rem 0 1.25rem 0 rgba(0, 0, 0, 0.05);
+    white-space: nowrap;
+
+    &:after{
+        display: block;
+        line-height: 1;
+        content: "ZOBRAZI\0164  VIAC";
+        @at-root :lang(en) &{
+            content: "SHOW MORE";
+        }
+    }
+}

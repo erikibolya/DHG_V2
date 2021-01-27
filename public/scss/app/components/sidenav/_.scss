@@ -1,0 +1,71 @@
+@import "variables.scss";
+
+.sidenav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: rem(400);
+    max-height: rem(700);
+    justify-content: space-between;
+    @include linear-interpolation-chain(font-size,(
+    xl: 22,
+        $sidebar-breakpoint: (17 22),
+        s: 17
+        ));
+    @include media($sidebar-breakpoint){
+        /*        min-height: rem(600);
+                max-height: rem(900);
+                justify-content: space-between;*/
+    }
+}
+
+.sidenav__item{
+    width: rem(210);
+    display: flex;
+    color: $color-primary;
+    text-decoration: none;
+
+    &--margin{
+        margin-bottom: rem(15);
+    }
+
+    &:not(.sidenav__item--main):hover{
+        .sidenav__logo{
+            transform: translateX(rem(5));
+        }
+        .sidenav__text{
+            transform: translateX(rem(5));
+        }
+    }
+}
+
+
+
+.sidenav__logo{
+    width: 100%;
+
+}
+
+.sidenav__divider{
+    width: 50%;
+    height: rem(1);
+    background-color: $color-primary-light;
+    @include media($sidebar-breakpoint){
+        margin-bottom: 0;
+    }
+}
+
+.sidenav__languages{
+    color: $color-primary-lighter;
+    margin-bottom: rem(50);
+}
+.sidenav__languages__item{
+    color: $color-primary-lighter;
+    text-decoration: none;
+    &:hover,&--active{
+        color: $color-primary;
+    }
+}
+
