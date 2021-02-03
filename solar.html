@@ -4,7 +4,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="sk">
     <head>
         <title>DH group</title>
         <meta charset="UTF-8">
@@ -12,21 +12,22 @@ and open the template in the editor.
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <link rel="stylesheet" href="public/css/main.css">
         <link rel="stylesheet" href="public/css/normalize.css">
+        <script src="https://unpkg.com/accordion-js@2.7.3/dist/accordion.min.js"></script>
+        <script src="public/js/scroll-into-view.js"></script>
     </head>
-    <body class="page--homepage page--about">
-        <header id="header" class="header header--homepage">
+    <body class="page--solar">
+       <header id="header" class="header">
             <div class="header__container">
-                <img class="header__logo" src="public/img/dhg-logo-header.svg">
-                <a href="about.html" class="header__link">
-                    About us
+                <a href="index.html">
+                     <img class="header__logo" src="public/img/dhg-logo-header.svg">
                 </a>
-                 <nav class="mininav homepage--hide">
-                    <a class="mininav__item mininav__item--active">
+                <nav class="mininav">
+                    <a href="developing.html" class="mininav__item">
                         <svg class="mininav__item__svg svg svg--minidevelop" viewBox="0 0 35.038 35.039">
                         <path class="svg__path" d="M1373.107,464.2h-22.775a6.132,6.132,0,0,0-6.132,6.132v28.907h28.907a6.132,6.132,0,0,0,6.132-6.132V470.327h0A6.132,6.132,0,0,0,1373.107,464.2Zm-11.867,4.443-.011.032c-.045.133-.086.253-.119.351a22.457,22.457,0,0,0-.82,3.031l-.017.1a2.217,2.217,0,0,0,.2,1.746,1.186,1.186,0,0,0,.889.447,1.219,1.219,0,0,0,.618-.146.878.878,0,0,1,.148-.059.983.983,0,0,1,1.06.422,1.553,1.553,0,0,1,.1,1.557,1.028,1.028,0,0,1-1.091.424,2.215,2.215,0,0,1-.327-.065,1.15,1.15,0,0,0-1.419.5,2.681,2.681,0,0,0-.021,2.08c.029.115.056.223.076.318.16.757.363,1.567.6,2.409-.191.059-.388.123-.592.188a12.228,12.228,0,0,1-1.925.52c-.057.008-.107.013-.151.016a3.023,3.023,0,0,0,.061-1.345,2.85,2.85,0,0,0-5.464.131,2.8,2.8,0,0,0,.109,1.028c.022.09.053.215.065.3a5.94,5.94,0,0,1-1.707-.336v-1.036h-4.675Zm-.095,24.295c-.1.33-.177.613-.233.846h-9.406v-10.1a6.151,6.151,0,0,0,1.582.285,1.491,1.491,0,0,0,1.133-.415,1.537,1.537,0,0,0,.232-1.549,1.7,1.7,0,0,1-.08-.544c.073-.6.76-.9,1.366-.927.207-.01,1.257-.007,1.45.91a1.922,1.922,0,0,1-.071.83,1.3,1.3,0,0,0,.153,1.241,1.637,1.637,0,0,0,1.487.314,13.14,13.14,0,0,0,2.173-.575c.176-.057.345-.112.51-.163a4.68,4.68,0,0,1,.183,2.064.706.706,0,0,1-.091-.016c-1.157-.283-2.765-.41-3.356,1.748a2.7,2.7,0,0,0,.48,2.5,2.5,2.5,0,0,0,2.3.761,3.624,3.624,0,0,0,.5-.109c.071-.019.169-.045.236-.056A9.3,9.3,0,0,1,1361.145,492.933Zm10.759.846h-9.6c.04-.142.083-.3.134-.471.594-2.045.98-3.668.12-4.385a1.472,1.472,0,0,0-1.446-.181,2.718,2.718,0,0,1-.328.074,1.224,1.224,0,0,1-1.11-.313,1.368,1.368,0,0,1-.2-1.264c.214-.78.456-1.113,1.743-.8a1.337,1.337,0,0,0,1.336-.3c.668-.66.5-1.966.187-3.411l.26-.075a6.447,6.447,0,0,1,1.832-.359.934.934,0,0,1-.025.174,2.94,2.94,0,0,0,.6,2.693,2.4,2.4,0,0,0,1.788.758,2.8,2.8,0,0,0,.41-.031,2.5,2.5,0,0,0,2.112-2.056,2.6,2.6,0,0,0-.076-1.172,1.4,1.4,0,0,1-.063-.364.331.331,0,0,1,.011-.085c.308-.19,1.631.209,2.318.426Zm.058-12.532c-1.179-.364-2.409-.655-3.157-.129a1.366,1.366,0,0,0-.573,1.128,2.532,2.532,0,0,0,.1.739,1.32,1.32,0,0,1,.059.6,1.159,1.159,0,0,1-.986.969,1.1,1.1,0,0,1-1.019-.312,1.627,1.627,0,0,1-.273-1.484,1.423,1.423,0,0,0-.326-1.447c-.71-.668-2.015-.288-3.166.045l-.217.063c-.233-.816-.43-1.6-.584-2.328-.023-.11-.054-.235-.088-.369a4.429,4.429,0,0,1-.165-.941,3.721,3.721,0,0,0,.485.092,2.349,2.349,0,0,0,2.39-1.073,2.869,2.869,0,0,0-.148-3.006,2.313,2.313,0,0,0-2.4-.981,1.635,1.635,0,0,0-.369.113,4.1,4.1,0,0,1,.067-.548l.019-.113a21.112,21.112,0,0,1,.766-2.815c.035-.106.075-.225.119-.354l.061-.181,4.417,3.875V469.45h3.854v6.727l5.781,5.07Z" transform="translate(-1344.2 -464.195)"/>
                         </svg>
                     </a>
-                    <a href="solar.html" class="mininav__item">
+                    <a class="mininav__item mininav__item--active">
                         <svg class="mininav__item__svg svg svg--minisolar" viewBox="0 0 35.038 35.039">
                         <g class="svg__path">
                         <path d="M1475.5,1335.7c.237.229,1.7.7,4.72.7s4.488-.474,4.724-.7a.145.145,0,0,1,.1-.04,7.821,7.821,0,1,0-9.637-.007l-.027.017a.147.147,0,0,1,.024-.005A.143.143,0,0,1,1475.5,1335.7Zm-1.864-6.2a6.594,6.594,0,1,1,9.43,5.947,23.323,23.323,0,0,1-5.663.005A6.59,6.59,0,0,1,1473.634,1329.5Z" transform="translate(-1462.724 -1312.985)"/>
@@ -75,149 +76,168 @@ and open the template in the editor.
                         </svg>
                     </a>
                 </nav>
+                <a href="about.html" class="header__link">
+                    About us
+                </a>
                 <div class="header__languages">
                     <a class="header__languages__item header__languages__item--active">
                         SK
                     </a>
                     /
-                    <a href="developing_en.html" class="header__languages__item">
+                    <a href="solar_en.html" class="header__languages__item">
                         EN
                     </a>
                 </div>
+            </div>
         </header>
-        <main class="main main--homepage">
-            <section class="homepage">
-                <div class="homepage__wrapper">
-                    <a href="developing.html" class="homepage__item division-developing">
-                        <img class="homepage__illustration" src="public/img/illustration-developing.svg">
-                        <img class="homepage__logo" src="public/img/dh-developing-logo.svg">
-                        <div class="homepage__paragraph paragraph">
-                            Zameriavame sa hlavne na projekty v logistike a rezidenčnom bývaní, preto sme schopní ponúknuť klientom v tomto segmente komplexné služby a riešenia šité na mieru.
-                        </div>
-                        <span class="homepage__link">
-                            <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                            <svg class="homepage__link__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                            <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="landscape.html"  class="homepage__item division-solar">
-                        <img class="homepage__illustration" src="public/img/illustration-solar.svg">
-                        <img class="homepage__logo" src="public/img/dh-solar-logo.svg">
-                        <div class="homepage__paragraph paragraph">
-                            Investujeme do obnoviteľných zdrojov energie, ktoré už dnes prinášajú výhody a v blízkej budúcnosti sa stanú hlavným zdrojom elektrickej energie nezaťažujúcej životné prostredie.
-                        </div>
-                        <span class="homepage__link">
-                            <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                            <svg class="homepage__link__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                            <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="landscape.html" class="homepage__item division-landscape">
-                        <img class="homepage__illustration" src="public/img/illustration-landscape.svg">
-                        <img class="homepage__logo" src="public/img/dh-landscape-logo.svg">
-                        <div class="homepage__paragraph paragraph">
-                            Okrem pestovania poľnohospodárskych plodín sa zaoberáme výskumom nových procesov v pestovaní travín a krmovín ekologickou cestou a jeho aplikovaním do praxe.
-                        </div>
-                        <span  class="homepage__link">
-                            <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                            <svg class="homepage__link__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                            <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                            </svg>
-                        </span>
-                    </a>
-                    <a href="finance.html" class="homepage__item division-finance">
-                        <img class="homepage__illustration" src="public/img/illustration-finance.svg">
-                        <img class="homepage__logo" src="public/img/dh-finance-logo.svg">
-                        <div class="homepage__paragraph paragraph">
-                            Naším cieľom je analýza finančného trhu, výber správnej investičnej stratégie a nástrojov a vyhľadávanie investičnej príležitosti s malou mierou rizika so zaujímavým výnosom.
-                        </div>
-                        <span  class="homepage__link">
-                            <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                            <svg class="homepage__link__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                            <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                            </svg>
-                        </span>
-                    </a>
-                    <div class="homepage__background">
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-         <main class="main homepage--hide">
+        <main class="main">
             <section class="info" id="introduce">
                 <div class="info__description">
-                    <img class="info__logo" src="public/img/dhg-logo.svg">
-                    <h2 class="info__heading heading heading--2">
-                        <span class="heading__light">Naše projekty zvyšujú kvalitu</span> života a budujú infraštruktúru.
-                        <img class="info__illustration info__illustration--about" src="public/img/dhg-logo-monotone.svg">
-                    </h2>
-                    <div class="info__paragraph paragraph">
-                        Investičná skupina DH Group drží krok s aktuálnymi spoločenskými trendmi - angažujeme sa v oblasti výskumu v ekologickom poľnohospodárstve, či hľadaní alternatívnych zdrojov výroby energie. Naše zameranie je rozšírené aj o oblasť developmentu a prieskumu finančného trhu spojeného s private equity investíciami.
-
+                    <div class="info__illustration info__illustration--small">
+                        <img class="info__svg" src="public/img/illustration-solar.svg">
                     </div>
-                    <div class="info__paragraph paragraph">
-                        V rámci reštrukturalizácie spoločností bola spoločnosť DH Group založená v roku 2013 ako materská firma zastrešujúca štyri spoločnosti: <u>DH Solar Energy, DH Landscape Invest, DH Developing a DH Finance, ktoré sa venujú projektom zvyšujúcim kvalitu života a budujúcim infraštruktúru s veľkým dôrazom na udržateľnosť v každom segmente a odvetví.</u> Profesionalita manažmentu a zamestnancov v spojení s dynamikou firmy zabezpečujú vysokú úroveň a bezproblémovú kvalitu spolupráce
+                    <img class="info__logo" src="public/img/dh-solar-logo.svg">
+                    <div class="info__accordion ac">
+                        <div class="info__accordion__wrapper">
+                            <div class="info__paragraph paragraph">
+                                Alternatívne zdroje na výrobu elektrickej energie, konkrétne najmä solárna energia, sú v poslednej dekáde intenzívne diskutovanou témou vo všetkých sférach spoločnosti, od energetikov cez spotrebiteľov, priemysel a v neposlednom rade až po ekológov.
+                            </div>
+                            <div class="info__paragraph paragraph paragraph--ml">
+                                Investície do alternatívnych zdrojov na výrobu elektrickej energie prinášajú veľa výhod, ako <u>znižovanie záťaže životného prostredia, vyššia energetická bezpečnosť, lacná energia a nízka energetická závislosť.</u> V spojení s inováciou a ekológiou vytvárajú príležitosť nahradiť bežné zdroje využitím solárnej energie, ktorá je prakticky nevyčerpateľná a veľmi dobre dostupná.
+                                <div class="info__illustration info__illustration--large">
+                                    <img class="info__svg svg svg--developing" src="public/img/illustration-solar.svg">
+                                </div>
+                            </div>
+                            <div class="info__accordion__hidden ac-a">
+                                <div class="info__paragraph paragraph">
+                                    Ako odozvu na tento celosvetový trend hľadania alternatív výroby elektrickej energie sme založili spoločnosť DH Solar Energy. <u>Ponúkame komplexné služby od poradenstva, cez prípravu projektu až po inštaláciu, a to nielen pre koncových užívateľov, ale aj ako riešenia pre investorské modely.</u> Taktiež zabezpečujeme predaj solárnych panelov a fotovoltaických komponentov.
+                                </div>
+                                <div class="info__paragraph paragraph">
+                                    Ďalším predmetom našej činnosti je <u>výstavba a prevádzka fotovoltaických parkov a elektrární,</u> čo sú veľmi významné projekty v segmente obnoviteľnej energie a taktiež čoraz viac vyhľadávané investície pre investorov a fondy.
+                                </div>
+                                <div class="info__paragraph paragraph">
+                                    Všetky naše služby ponúkame <u>v súlade s najvyššou kvalitou, odbornosťou a profesionalitou</u> a zároveň spĺňajúc neustále sa zvyšujúce normy chrániace životné prostredie.
+                                </div>
+                            </div>
+                            <span class="info__accordion__button ac-q">
+                            </span>
+                            <div class="info__gradient"></div>
+                        </div>
                     </div>
                 </div>
+                <script>
+                    new Accordion('.info__description');
+                </script>
             </section> 
-            <section class="divisions" id="divisions">
-                <h2 class="divisions__heading heading heading--2">
-                    Divízie DH Group
+             <section class="invests" id="invests">
+                <h2 class="invests__heading heading heading--2">
+                    <!--<span class="heading__text heading__text--warning">
+                        PRIPRAVUJEME
+                    </span>-->
+                    <span class="heading__text">
+                        Aktuálne&nbsp;projekty  
+                    </span>
+                    <span class="heading__breadcrumb">/DEVELOPING&nbsp;&&nbsp;CONSTRUCTION/</span>
                 </h2>
-                <div class="divisions__card division-developing">
-                    <img class="divisions__card__logo" src="public/img/dh-developing-logo.svg">
-                    <div class="divisions__card__paragraph">
-                        Zameriavame sa hlavne na projekty v logistike a rezidenčnom bývaní, preto sme schopní ponúknuť klientom v tomto segmente komplexné služby a riešenia šité na mieru.
+                <div class="invests__row">
+                    <div class="invests__contacts">
+                        <img class="invests__logo invests__logo--small" src="public/img/logo.png">
+                        <table class="table table--full" border="0" cellspacing="0" cellpadding="0">
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <span class="placeholder-text">Web: </span>
+                                </td>
+                                <td class="table__cell">
+                                    <span class="placeholder-text">www.kokot.sk</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row table__row--space">
+                                <td class="table__cell">
+                                    <span class="placeholder-text">Email:</span>
+                                </td>
+                                <td class="table__cell">
+                                    <span class="placeholder-text">support@kokot.sk</span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <a href="developing.html" class="divisions__card__button">
-                        <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                        <svg class="divisions__card__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                        <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                        </svg>
-                    </a>
+                    <div class="invests__description">
+                        <h2 class="invests__description__heading heading heading--2">
+                            <span class="placeholder-text placeholder-text--bold">Lorem ipsum dolor sit</span>
+                        </h2>
+                        <div class="invests__paragraph paragraph">
+                            <span class="placeholder-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ante. Mauris metus. Aliquam in lorem sit amet leo accumsan lacinia. Phasellus et lorem id felis nonummy placerat.</span> 
+                        </div>
+                    </div>
+                    <img class="invests__logo invests__logo--large" src="https://via.placeholder.com/274x90/f8f8f8/f8f8f8?text=a">
                 </div>
-                <div class="divisions__card division-landscape">
-                    <img class="divisions__card__logo" src="public/img/dh-landscape-logo.svg">
-                    <div class="divisions__card__paragraph">
-                        Okrem pestovania poľnohospodárskych plodín sa zaoberáme výskumom nových procesov v pestovaní travín a krmovín ekologickou cestou a jeho aplikovaním do praxe.
+                <div class="invests__row">
+                    <div class="invests__contacts">
+                        <img class="invests__logo invests__logo--small" src="https://via.placeholder.com/274x90/f8f8f8/f8f8f8?text=a">
+                        <table class="table table--full" border="0" cellspacing="0" cellpadding="0">
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <span class="placeholder-text">Web: </span>
+                                </td>
+                                <td class="table__cell">
+                                    <span class="placeholder-text">www.kokot.sk</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row table__row--space">
+                                <td class="table__cell">
+                                    <span class="placeholder-text">Email:</span>
+                                </td>
+                                <td class="table__cell">
+                                    <span class="placeholder-text">support@kokot.sk</span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <a href="landscape.html" class="divisions__card__button">
-                        <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                        <svg class="divisions__card__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                        <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                        </svg>
-                    </a>
+                    <div class="invests__description">
+                        <h2 class="invests__description__heading heading heading--2">
+                            <span class="placeholder-text placeholder-text--bold">Lorem ipsum dolor sit</span>
+                        </h2>
+                        <div class="invests__paragraph paragraph">
+                            <span class="placeholder-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ante. Mauris metus. Aliquam in lorem sit amet leo accumsan lacinia. Phasellus et lorem id felis nonummy placerat.</span> 
+                        </div>
+                    </div>
+                    <img class="invests__logo invests__logo--large" src="https://via.placeholder.com/274x90/f8f8f8/f8f8f8?text=a">
                 </div>
-                <div class="divisions__card division-solar">
-                    <img class="divisions__card__logo" src="public/img/dh-solar-logo.svg">
-                    <div class="divisions__card__paragraph">
-                        Investujeme do obnoviteľných zdrojov energie, ktoré už dnes prinášajú výhody a v blízkej budúcnosti sa stanú hlavným zdrojom elektrickej energie nezaťažujúcej životné prostredie.
+                <div class="invests__row">
+                    <div class="invests__contacts">
+                        <img class="invests__logo invests__logo--small" src="https://via.placeholder.com/274x90/f8f8f8/f8f8f8?text=a">
+                        <table class="table table--full" border="0" cellspacing="0" cellpadding="0">
+                            <tr class="table__row">
+                                <td class="table__cell">
+                                    <span class="placeholder-text">Web: </span>
+                                </td>
+                                <td class="table__cell">
+                                    <span class="placeholder-text">www.kokot.sk</span>
+                                </td>
+                            </tr>
+                            <tr class="table__row table__row--space">
+                                <td class="table__cell">
+                                    <span class="placeholder-text">Email:</span>
+                                </td>
+                                <td class="table__cell">
+                                    <span class="placeholder-text">support@kokot.sk</span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <a href="landscape.html" class="divisions__card__button">
-                        <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                        <svg class="divisions__card__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                        <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                        </svg>
-                    </a>
-                </div>
-                <div class="divisions__card division-finance">
-                    <img class="divisions__card__logo" src="public/img/dh-finance-logo.svg">
-                    <div class="divisions__card__paragraph">
-                        Naším cieľom je analýza finančného trhu, výber správnej investičnej stratégie a nástrojov a vyhľadávanie investičnej príležitosti s malou mierou rizika so zaujímavým výnosom.
+                    <div class="invests__description">
+                        <h2 class="invests__description__heading heading heading--2">
+                            <span class="placeholder-text placeholder-text--bold">Lorem ipsum dolor sit</span>
+                        </h2>
+                        <div class="invests__paragraph paragraph">
+                            <span class="placeholder-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam ante. Mauris metus. Aliquam in lorem sit amet leo accumsan lacinia. Phasellus et lorem id felis nonummy placerat.</span> 
+                        </div>
                     </div>
-                    <a href="finance.html" class="divisions__card__button">
-                        <img class="ratio-keeper" src="public/img/ratio-keepers/1x1.png">
-                        <svg class="divisions__card__svg svg svg--arrow" viewBox="0 0 258.4 445.8">
-                        <polyline class="svg__path" fill="none" stroke-width="65" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="32.5,413.3 225.9,222.8 32.5,32.5 "/>
-                        </svg>
-                    </a>
+                    <img class="invests__logo invests__logo--large" src="https://via.placeholder.com/274x90/f8f8f8/f8f8f8?text=a">
                 </div>
             </section>
         </main>
-         <footer class="footer homepage--hide">
+        <footer class="footer">
             <div class="footer__left">
                 <img class="footer__img" src="public/img/dhg-logo-monotone.svg">
                 <span class="footer__copyright">
@@ -263,6 +283,6 @@ and open the template in the editor.
                 </div>
             </div>
         </footer>
-         <script src="public/js/custom.js" type="text/javascript"></script>
+        <script src="public/js/custom.js" type="text/javascript"></script>
     </body>
 </html>

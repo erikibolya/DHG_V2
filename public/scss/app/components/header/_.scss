@@ -12,22 +12,28 @@
     /*@include linear-interpolation-chain(height,$header-heights);*/
     transition: height $header-transition-duration $header-transition-timing-function;
     will-change: height;
-    
-    
-    @include media($sidebar-breakpoint){
-      height: rem($header-height);
-    }
 
+
+    @include media($sidebar-breakpoint){
+        height: rem($header-height); 
+    }
 }
 
+.header--homepage{
+
+    @include media($homepage-breakpoint){
+        background-color: transparent;
+        height: rem($header-height-scrolled);
+    }
+}
 
 .header--scrolled{
-   
+
     box-shadow: 0.3125rem 0 1.25rem 0 rgba(0, 0, 0, 0.05);
 
     @include media($sidebar-breakpoint){
-         height: rem($header-height-scrolled); 
-       .header__logo{
+        height: rem($header-height-scrolled); 
+        .header__logo{
             width: rem($header-logo-scrolled);
         }
     }
@@ -41,6 +47,12 @@
     @include container;
     height: 100%;
     align-items: center;
+
+    @at-root .header--homepage &{
+        max-width: 100%;
+        @include linear-interpolation-chain(padding-left,$homepage-item-paddings-horizontal);
+        @include linear-interpolation-chain(padding-right,$homepage-item-paddings-horizontal);
+    }
 }
 
 
@@ -53,9 +65,15 @@
     transition-property: width, height;
     transition-duration: $header-transition-duration;
     transition-timing-function: $header-transition-timing-function;
-    
+
     @include media($sidebar-breakpoint){
-         width: rem($header-logo-width); 
+        width: rem($header-logo-width); 
+    }
+
+    @at-root .header--homepage &{
+        @include media($homepage-breakpoint){
+            width: rem($header-logo-scrolled);
+        } 
     }
 }
 
