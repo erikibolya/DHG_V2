@@ -1226,7 +1226,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  font-size: 100%; }
+  font-size: 100%;
+  overflow-x: hidden; }
 
 *,
 *:before,
